@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.navlist {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.left-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #100808;
+    width: 100%;
+    padding-left: 3rem;
+}
+
+.icons .fa-brands {
+    color: #bbbb;
+    font-size: 1.7rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.content {
+    color: #969696;
+    margin-left: 4rem;
+}
+
+.content .intro {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.content .intro span {
+    color: rgba(238, 70, 104, 0.811);
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: rgba(238, 70, 104, 0.811);
+}
+
+.content .detail {
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.5rem;
+}
+
+.btn-container button {
+    border: 1rem rgba(238, 70, 104, 0.811);
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:nth-child(1),
+button:nth-child(2) {
+    background: rgba(238, 70, 104, 0.811);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+button:hover {
+    background: #fff;
+    color: rgba(238, 70, 104, 0.811);
+}
+
+.navlist li a::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: .1rem;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+}
+
+.navlist li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.projects-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    color: rgba(238, 70, 104, 0.811);
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    color: #333;
+    margin: 10px 0;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-section {
+    padding: 50px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.contact-section h2 {
+    color: rgba(238, 70, 104, 0.811);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: rgba(238, 70, 104, 0.811);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #fff;
+    color: rgba(238, 70, 104, 0.811);
+    transform: translateY(-2px);
+}
+
+#thankYouMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: lightgreen;
+    display: none;
+    text-align: center;
+}

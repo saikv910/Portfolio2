@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'/>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="portfolio-container">
+        <div class="left-container">
+            <div class="icons">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="content">
+                <p class="intro">Hi! I am <span>Sai Krishna Veni</span></p>
+                <h1>MCA Student at CUSAT.</h1>
+                <p class="detail">As an MCA student, I am driven by a relentless curiosity for all things tech. With a knack for problem-solving and a love for coding, I dive deep into the world of software development. Whether it's crafting elegant algorithms or building intuitive web applications, I thrive on the challenges that come with pushing the boundaries of technology. Collaborative by nature, I enjoy working in teams, leveraging diverse perspectives to achieve common goals. With a commitment to lifelong learning, I eagerly embrace new technologies and methodologies, always seeking to expand my skill set and make meaningful contributions to the field of computer science.</p>
+                <div class="btn-container">
+                    <button onclick="scrollToSection('projects')">View Projects</button>
+                    <button onclick="scrollToSection('contact')">Contact Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <br>
+                <a href="https://github.com/saikv910/portfolio_website" class="view-details">View Details</a>
+            </div>
+            <div class="project-card">
+                <h3>Fake News Detection Using Deep Learning Techniques</h3>
+                <br>
+                <a href="https://github.com/saikv910/Fake_News_Detection" class="view-details">View Details</a>
+            </div>
+            <div class="project-card">
+                <h3>Word Bank</h3>
+                <br>
+                <a href="https://github.com/saikv910/wordBank" class="view-details">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="thankYouMessage" style="display: none;">Thank you for your message!</div>
+    </section>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            document.querySelector('.contact-form').reset();
+            document.getElementById('thankYouMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
